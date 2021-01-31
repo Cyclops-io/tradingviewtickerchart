@@ -14,7 +14,7 @@ text = []
 if __name__ == "__main__":
     for index, row in table.iterrows():
         ticker = row['Symbol']
-        if ticker != 'nan':
+        if str(ticker) != 'nan':
             text.append(str(f'{var}{index} = input(\'{ticker}\', type=input.symbol)'))
 #            text.append(("\n   "))
     with open('output.txt', 'w') as f:
